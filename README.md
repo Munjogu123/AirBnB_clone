@@ -26,21 +26,29 @@ At the end of the entire project we would have composed:
 2. How to use the command interpreter
 
     * To create a new instance
-    `create <classname>`
+
+        `create <classname>`
 
     * To print a string representation of an instance based on class name and id
-    `show <classname> <id>`
+
+        `show <classname> <id>`
 
     * To delete an instance based on the class name and id
-    `destroy <classname> <id>`
+
+        `destroy <classname> <id>`
 
     * To print all string representations of all instances based or not on the class name
-    `all`
-    or
-    `all <classname>`
+
+        `all`
+
+        or 
+
+        `all <classname>`
 
     * To update an instance based on the class name and id by adding or updating attribute
-    `update <class name> <id> <attribute name> "<attribute value>"`
+
+        `update <class name> <id> <attribute name> "<attribute value>"`
 
     * To quit type
-    `quit`
+
+        `quit`
