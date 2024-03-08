@@ -1,4 +1,4 @@
-# AirBnB Clone
+<h1 align="center">AirBnB Clone</h1>
 
 ## A clone of the AirBnB app with a console to help in executing some of the commands!
 
