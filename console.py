@@ -3,6 +3,12 @@ import cmd
 import shlex
 from models.base_model import BaseModel
 from models import storage
+from models.user import User
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
 """ Contains a console used to execute operations """
 
 
@@ -12,7 +18,14 @@ class HBNBCommand(cmd.Cmd):
     execute operations on the json file
     """
     prompt = '(hbnb) '
-    classes = ['BaseModel']
+    classes = {'BaseModel': BaseModel,
+               'User': User,
+               'State': State,
+               'City': City,
+               'Amenity': Amenity,
+               'Place': Place,
+               'Review': Review
+               }
 
     def do_quit(self, line):
         """ quits the command line """
@@ -42,9 +55,11 @@ class HBNBCommand(cmd.Cmd):
             if command[0] not in self.classes:
                 print("** class doesn't exist **")
             else:
-                inst = BaseModel()
-                inst.save()
-                print(inst.id)
+                for key, value in self.classes.items():
+                    if key == command[0]:
+                        inst = value()
+                        inst.save()
+                        print(inst.id)
 
     def do_show(self, arg):
         """

@@ -24,7 +24,7 @@ class BaseModel:
 
     def __str__(self):
         """ overwrites the str function to print some elements of the class """
-        return f'{[type(self).__name__]} {(self.id)} {self.__dict__}'
+        return f'{[type(self).__name__]} ({self.id}) {self.__dict__}'
 
     def save(self):
         """ updates the public instance attribute
