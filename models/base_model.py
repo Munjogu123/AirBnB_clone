@@ -8,6 +8,7 @@ import models
 class BaseModel:
     """ Superclass for all other classes """
     def __init__(self, *args, **kwargs):
+        """ Initialization of BaseModel """
         if kwargs:
             for key, value in kwargs.items():
                 if key == 'created_at':
