@@ -2,7 +2,7 @@
 import unittest
 import datetime
 from models.base_model import BaseModel
-""" contains module test_base_model """
+""" contains module test_baseModel """
 
 
 class TestBaseModel(unittest.TestCase):
