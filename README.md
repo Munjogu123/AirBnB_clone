@@ -49,6 +49,6 @@ At the end of the entire project we would have composed:
 
         `update <class name> <id> <attribute name> "<attribute value>"`
 
-    * To quit type
+    * To exit the command interpreter type
 
         `quit`
