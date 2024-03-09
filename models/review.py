@@ -8,3 +8,7 @@ class Review(BaseModel):
     place_id = ''
     user_id = ''
     text = ''
+
+    def __str__(self):
+        """ overwrites the str function to print some elements of the class """
+        return f'[Review] ({self.id}) {self.__dict__}'

@@ -16,3 +16,7 @@ class Place(BaseModel):
     latitude = 0.0
     longitude = 0.0
     amenity_ids = []
+
+    def __str__(self):
+        """ overwrites the str function to print some elements of the class """
+        return f'[Place] ({self.id}) {self.__dict__}'
