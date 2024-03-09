@@ -29,7 +29,6 @@ class HBNBCommand(cmd.Cmd):
 
     def do_quit(self, line):
         """ quits the command line """
-        print()
         return True
 
     def help_quit(self):
@@ -39,7 +38,7 @@ class HBNBCommand(cmd.Cmd):
 
     def emptyline(self):
         """ moves to next line when 'enter' is pressed """
-        pass
+        return False
 
     def do_create(self, arg):
         """
