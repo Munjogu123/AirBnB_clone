@@ -165,6 +165,24 @@ class HBNBCommand(cmd.Cmd):
 
                 setattr(obj_dict, attr_name, attr_value)
                 obj_dict.save()
+   
+
+   def default(self, arg):
+        """ overrides the default command in cmd module """
+        args = arg.split('.')
+        command = args[1].split('(')
+
+        commands = {'all': self.do_all,
+                    'show': self.do_show,
+                    'update': self.do_update
+                    }
+
+        if command[0] in commands.keys():
+            return commands[command[0]](f'{args[0]}')
+
+        print(f'*** Uknown syntax: {arg}')
+        return False
+
 
 
 if __name__ == '__main__':
