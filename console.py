@@ -27,14 +27,13 @@ class HBNBCommand(cmd.Cmd):
                'Review': Review
                }
 
-    def do_quit(self, line):
-        """ quits the command line """
+    def do_quit(self, arg):
+        """ Quit command to exit the program """
         return True
 
-    def help_quit(self):
-        """ explains the working of the quit command """
-        print("Quit command to exit the program")
-        print()
+    def do_EOF(self, arg):
+        """ Exits console """
+        return True
 
     def emptyline(self):
         """ moves to next line when 'enter' is pressed """
@@ -166,9 +165,6 @@ class HBNBCommand(cmd.Cmd):
 
                 setattr(obj_dict, attr_name, attr_value)
                 obj_dict.save()
-
-    do_EOF = do_quit
-    help_EOF = help_quit
 
 
 if __name__ == '__main__':
