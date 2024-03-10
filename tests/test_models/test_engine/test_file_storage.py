@@ -21,4 +21,3 @@ class TestFileStorage(unittest.TestCase):
     def test_all(self):
         """ tests the all function """
         self.assertEqual(type(models.storage.all()), dict)
-
