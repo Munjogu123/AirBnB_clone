@@ -165,24 +165,51 @@ class HBNBCommand(cmd.Cmd):
 
                 setattr(obj_dict, attr_name, attr_value)
                 obj_dict.save()
-   
 
-   def default(self, arg):
+    def default(self, arg):
         """ overrides the default command in cmd module """
         args = arg.split('.')
         command = args[1].split('(')
+        command_1 = command[1].split(')')[0]
+        attributes = command_1.split(',')
 
         commands = {'all': self.do_all,
                     'show': self.do_show,
-                    'update': self.do_update
+                    'update': self.do_update,
+                    'count': self.do_count,
+                    'destroy': self.do_destroy
                     }
 
         if command[0] in commands.keys():
-            return commands[command[0]](f'{args[0]}')
+            if command[0] != 'update':
+                return commands[command[0]](f'{args[0]} {command_1}')
+            else:
+                command_2 = attributes[0]
+                command_3 = attributes[1]
+                command_4 = eval(attributes[2])
+                return commands[command[0]](
+                    f'{args[0]} {command_2} {command_3} {command_4}')
 
         print(f'*** Uknown syntax: {arg}')
         return False
 
+    def do_count(self, arg):
+        """ counts the no of instances in a class """
+        arg_list = shlex.split(arg)
+        command = arg_list[0]
+        objects = storage.all()
+        count = 0
+
+        if arg_list:
+            if command in self.classes:
+                for obj in objects.values():
+                    if obj.__class__.__name__ == command:
+                        count += 1
+                print(count)
+            else:
+                print("** class doesn't exist **")
+        else:
+            print("** class name missing **")
 
 
 if __name__ == '__main__':
