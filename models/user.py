@@ -9,7 +9,3 @@ class User(BaseModel):
     password = ''
     first_name = ''
     last_name = ''
-
-    def __str__(self):
-        """ overwrites the str function to print some elements of the class """
-        return f'[User] ({self.id}) {self.__dict__}'
