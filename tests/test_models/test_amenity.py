@@ -23,5 +23,5 @@ class TestAmenity(unittest.TestCase):
         self.assertIn(amenity.id, str(amenity))
         self.assertIn(str(amenity.__dict__), str(amenity))
 
-if name == '__main__':
+if __name__ == '__main__':
     unittest.main()
