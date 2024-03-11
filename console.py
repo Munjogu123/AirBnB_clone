@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" contains module console """
+
+
 import cmd
 import shlex
 from models.base_model import BaseModel
@@ -9,7 +12,6 @@ from models.city import City
 from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
-""" Contains a console used to execute operations """
 
 
 class HBNBCommand(cmd.Cmd):
