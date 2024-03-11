@@ -22,3 +22,6 @@ class TestAmenity(unittest.TestCase):
         self.assertTrue(str(amenity).startswith('[Amenity]'))
         self.assertIn(amenity.id, str(amenity))
         self.assertIn(str(amenity.__dict__), str(amenity))
+
+if name == '__main__':
+    unittest.main()
