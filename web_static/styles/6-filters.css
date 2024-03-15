@@ -79,10 +79,14 @@ section.filters button {
 
 .locations:hover > .popover {
     display: block;
+    z-index: 30;
+    position: relative;
 }
 
 .amenities:hover > .popover {
     display: block;
+    z-index: 30;
+    position: relative;
 }
 
 .locations > .popover > li > ul > li {
