@@ -1,5 +1,6 @@
 .places {
     align-self: flex-start;
+    margin-top: 12px;
 }
 
 section.places article {
@@ -14,6 +15,7 @@ section.places article {
 
 .flex-places {
     display: flex;
+    margin-top: -20px;
 }
 
 .elem-3 {
