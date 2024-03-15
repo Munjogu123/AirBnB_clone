@@ -23,6 +23,7 @@ section.filters button {
 
 .container section button:hover {
     opacity: 90%;
+    cursor: pointer;
 }
 
 .locations h3, .amenities h3 {
