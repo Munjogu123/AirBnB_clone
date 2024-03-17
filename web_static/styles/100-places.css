@@ -21,6 +21,8 @@ section.places article {
 .flex-places {
     display: flex;
     margin-top: -20px;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 .place {
@@ -31,7 +33,7 @@ section.places article {
 
 .elem-3 {
     position: absolute;
-    left: 235px;
+    left: 24%;
 }
 
 .price_by_night {
